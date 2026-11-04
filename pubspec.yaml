@@ -1,0 +1,27 @@
+name: flutter_wcag_audit
+description: Automated WCAG 2.1 and 2.2 accessibility audits for Flutter apps, with semantics, contrast, text scaling, source locations, and CI reports.
+version: 0.1.0-dev.1
+homepage: https://github.com/ORACHITECH-OFFICIAL/flutter_wcag_audit
+repository: https://github.com/ORACHITECH-OFFICIAL/flutter_wcag_audit
+issue_tracker: https://github.com/ORACHITECH-OFFICIAL/flutter_wcag_audit/issues
+
+environment:
+  sdk: ">=3.8.0 <4.0.0"
+  flutter: ">=3.32.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+
+topics:
+  - a11y
+  - accessibility
+  - flutter
+  - testing
+  - wcag
+
