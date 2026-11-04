@@ -132,8 +132,11 @@ final class DuplicateControlNameRule implements WcagRule {
     final Map<String, List<SemanticsNodeSnapshot>> groups =
         <String, List<SemanticsNodeSnapshot>>{};
     for (final SemanticsNodeSnapshot node in nodes) {
-      if (node.isExcluded || !node.isInteractive || node.accessibleName.isEmpty)
+      if (node.isExcluded ||
+          !node.isInteractive ||
+          node.accessibleName.isEmpty) {
         continue;
+      }
       groups
           .putIfAbsent(
             node.accessibleName.toLowerCase(),

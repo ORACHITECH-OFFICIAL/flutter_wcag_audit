@@ -84,8 +84,9 @@ void _captureNode(
   SemanticsNode? current = node;
   while (current != null) {
     final Matrix4? transform = current.transform;
-    if (transform != null)
+    if (transform != null) {
       bounds = MatrixUtils.transformRect(transform, bounds);
+    }
     current = current.parent;
   }
 
