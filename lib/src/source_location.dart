@@ -26,12 +26,11 @@ SourceLocation? sourceLocationForElement(Element element) {
 SourceLocation? _creationLocation(Element element) {
   SourceLocation? result;
   assert(() {
-    final InspectorSerializationDelegate delegate =
-        // This package runs only inside Flutter's testing environment.
-        // ignore: invalid_use_of_visible_for_testing_member
-        InspectorSerializationDelegate(
-          service: WidgetInspectorService.instance,
-        );
+    // This package runs only inside Flutter's testing environment.
+    // ignore: invalid_use_of_visible_for_testing_member
+    final delegate = InspectorSerializationDelegate(
+      service: WidgetInspectorService.instance,
+    );
     final Map<String, Object?> json = element.toDiagnosticsNode().toJsonMap(
       delegate,
     );
